@@ -4,6 +4,7 @@ import { useNatilleraDetail, useNatilleraActions, useHasContributed } from "../h
 import { parseEther } from "viem";
 import { useState } from "react";
 import ConnectWallet from "../components/ConnectWallet";
+import PassportScore from "../components/PassportScore";
 
 const STATUS_COLORS = {
   0: "bg-yellow-100 text-yellow-700",
@@ -174,6 +175,11 @@ export default function NatilleraDetail() {
 
       {error && <p className="text-red-500 text-sm bg-red-50 px-4 py-2 rounded-xl mb-4">{error}</p>}
       {success && <p className="text-green-600 text-sm bg-green-50 px-4 py-2 rounded-xl mb-4">{success}</p>}
+
+      {/* Passport.xyz identity verification */}
+      <div className="mb-4">
+        <PassportScore />
+      </div>
 
       {/* Members list */}
       <h3 className="text-base font-semibold text-gray-700 mb-3">Miembros</h3>
