@@ -1,0 +1,15 @@
+{
+  "name": "natillera-agent-8004",
+  "version": "1.0.0",
+  "description": "ERC-8004 Trustless Agent for Natillera On-Chain on Celo",
+  "type": "module",
+  "scripts": {
+    "register": "node register-agent.js",
+    "start": "node agent.js",
+    "feedback": "node post-feedback.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.4"
+  }
+}

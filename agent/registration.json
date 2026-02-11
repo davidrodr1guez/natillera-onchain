@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Natillera Agent",
+  "description": "AI agent that manages rotating savings groups (natilleras/tandas) on Celo. Creates groups, monitors contributions, enforces deadlines, advances rounds, and tracks member activity. Built for the Colombian community using cUSD stablecoins.",
+  "image": "https://raw.githubusercontent.com/celo-org/celo-monorepo/master/packages/phone-utils/branding/celo-icon.png",
+  "services": [
+    {
+      "name": "natillera-manager",
+      "description": "Manages rotating savings groups: create, join, contribute, advance rounds, enforce penalties"
+    }
+  ],
+  "x402Support": false,
+  "active": true,
+  "registrations": [
+    {
+      "agentId": 12,
+      "agentRegistry": "eip155:42220:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432"
+    }
+  ],
+  "supportedTrust": [
+    "reputation"
+  ],
+  "capabilities": [
+    "create-natillera",
+    "monitor-contributions",
+    "enforce-deadlines",
+    "advance-rounds",
+    "track-payouts",
+    "member-notifications"
+  ],
+  "chain": {
+    "name": "Celo",
+    "chainId": 42220,
+    "rpc": "https://forno.celo.org"
+  },
+  "contracts": {
+    "natilleraFactory": "0x6567645D4150AbC2c7802DaD76711be8b8669171",
+    "cUSD": "0x765DE816845861e75A25fCA122bb6898B8B1282a"
+  }
+}
