@@ -14,12 +14,12 @@ module.exports = {
   networks: {
     hardhat: {},
     alfajores: {
-      url: "https://alfajores-fern.celo-testnet.org",
+      url: "https://alfajores-forno.celo-testnet.org",
       chainId: 44787,
       accounts: PRIVATE_KEY !== "0x" + "0".repeat(64) ? [PRIVATE_KEY] : [],
     },
     celo: {
-      url: "https://fern.celo.org",
+      url: "https://forno.celo.org",
       chainId: 42220,
       accounts: PRIVATE_KEY !== "0x" + "0".repeat(64) ? [PRIVATE_KEY] : [],
     },
