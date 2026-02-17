@@ -397,10 +397,15 @@ export default function AgentChat() {
       setLoading(true);
 
       try {
+        // Build history for context (exclude welcome message, convert roles)
+        const history = messages
+          .filter((m) => m.id !== "welcome")
+          .map((m) => ({ role: m.role === "user" ? "user" : "assistant", content: m.text }));
+
         const res = await fetch(API_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: trimmed }),
+          body: JSON.stringify({ message: trimmed, history }),
         });
 
         if (!res.ok) {
