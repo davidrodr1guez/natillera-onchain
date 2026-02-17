@@ -2,6 +2,32 @@
 
 Grupos de ahorro rotativo (natilleras/tandas) en la blockchain de Celo. Cada participante contribuye periódicamente y en cada ronda una persona recibe el pozo completo.
 
+**Celo Agent Hackathon — "Build Agents for the Real World"**
+
+## 🔗 Links
+
+| Recurso | URL |
+|---------|-----|
+| 🌐 Frontend (MiniPay) | https://frontend-neon-nine-31.vercel.app |
+| 📱 Farcaster Mini App | https://farcaster.xyz/miniapps/019c622a-bbde-2b35-f754-c4959984d062/natillera-on-chain |
+| 📜 Smart Contract | [0xE9D8670897b7AEdFD7a7ACB783c229d63Ce76F2E](https://celoscan.io/address/0xE9D8670897b7AEdFD7a7ACB783c229d63Ce76F2E) |
+| 🤖 ERC-8004 Agent ID | #12 en Celo Mainnet |
+| 📊 Karma GAP | https://www.karmahq.xyz/ |
+
+## 🤖 AI Agent (ERC-8004)
+
+Este proyecto incluye un agente de IA registrado bajo el estándar **ERC-8004** en Celo Mainnet:
+- **Agent ID:** #12
+- **IdentityRegistry:** `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`
+- **ReputationRegistry:** `0x8004BAa17C55a88189AE136b182e5fdA19dE9b63`
+- **Verificación SelfClaw:** Identidad humana verificada con ZK proof
+- **Reputation score:** ~96-97/100 (25 feedbacks on-chain)
+
+El agente automatiza:
+- Seguimiento de contribuciones periódicas
+- Distribución de fondos a recipientes
+- Construcción de reputación on-chain
+
 **Latam Buildathon 2026** — https://latamhubs.lat
 
 ## Arquitectura
