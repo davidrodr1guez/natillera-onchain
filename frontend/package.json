@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@farcaster/frame-sdk": "^0.1.14",
     "@human.tech/passport-embed": "^0.3.4",
     "@human.tech/waap-sdk": "^1.0.3",
     "@tanstack/react-query": "^5.90.21",

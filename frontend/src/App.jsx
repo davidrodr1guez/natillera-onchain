@@ -3,6 +3,8 @@ import { WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { config } from "./utils/wagmiConfig";
 import Layout from "./components/Layout";
+import FarcasterInit from "./components/FarcasterInit";
+import AgentChat from "./components/AgentChat";
 import Home from "./pages/Home";
 import CreateNatillera from "./pages/CreateNatillera";
 import NatilleraDetail from "./pages/NatilleraDetail";
@@ -15,6 +17,7 @@ export default function App() {
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
+          <FarcasterInit />
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -23,6 +26,7 @@ export default function App() {
               <Route path="/history" element={<History />} />
             </Routes>
           </Layout>
+          <AgentChat />
         </BrowserRouter>
       </QueryClientProvider>
     </WagmiProvider>
