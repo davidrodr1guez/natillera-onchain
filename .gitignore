@@ -7,3 +7,4 @@ coverage
 coverage.json
 frontend/node_modules
 frontend/dist
+agent/agent-ed25519-priv.key
