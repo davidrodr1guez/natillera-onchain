@@ -359,9 +359,13 @@ export default function AgentChat() {
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
-  // Inject keyframe animations on mount
+  // Inject keyframe animations on mount + listen for external open event
   useEffect(() => {
     injectKeyframes();
+
+    const handleOpen = () => setExpanded(true);
+    window.addEventListener("openAgentChat", handleOpen);
+    return () => window.removeEventListener("openAgentChat", handleOpen);
   }, []);
 
   // Auto-scroll to newest message
