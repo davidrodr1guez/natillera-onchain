@@ -33,13 +33,13 @@ const API_URL = "https://natillera-frame.vercel.app/api/chat";
 const WELCOME_MESSAGE = {
   id: "welcome",
   role: "agent",
-  text: "Hola, soy el Agente Natillera #12. Puedo ayudarte con informacion sobre las natilleras activas, como participar, y el estado de los contratos en Celo. ¿En que te puedo ayudar?",
+  text: "Hey! I'm Natillera Agent #12 — autonomous on Celo Mainnet. I manage 4 active rotating savings groups. What would you like to know?",
 };
 
 const QUICK_ACTIONS = [
-  "¿Que natilleras hay?",
-  "¿Como participo?",
-  "Estado de contratos",
+  "What groups are active?",
+  "How do I join?",
+  "Contract status",
 ];
 
 // ── Inline style objects ────────────────────────────────────────────────
@@ -465,7 +465,7 @@ export default function AgentChat() {
   // ── Render ──────────────────────────────────────────────────────────
 
   return (
-    <div style={styles.wrapper} role="complementary" aria-label="Agente Natillera chat">
+    <div style={styles.wrapper} role="complementary" aria-label="Natillera Agent chat">
       {/* ── Expandable panel ──────────────────────────────────────── */}
       <div style={styles.panel(expanded)}>
         {/* Messages */}
@@ -532,7 +532,7 @@ export default function AgentChat() {
             onKeyDown={handleKeyDown}
             onFocus={() => setInputFocused(true)}
             onBlur={() => setInputFocused(false)}
-            placeholder="Escribe tu pregunta..."
+            placeholder="Ask me anything..."
             style={{
               ...styles.input,
               ...(inputFocused ? styles.inputFocused : {}),
@@ -572,9 +572,9 @@ export default function AgentChat() {
           <AgentIcon size={18} />
         </div>
         <div style={{ flex: 1 }}>
-          <div style={styles.toggleBarLabel}>Agente Natillera</div>
+          <div style={styles.toggleBarLabel}>Natillera Agent</div>
           {!expanded && (
-            <div style={styles.toggleBarHint}>Preguntale sobre las natilleras</div>
+            <div style={styles.toggleBarHint}>Ask about the savings groups</div>
           )}
         </div>
         <ChevronIcon style={styles.chevron(expanded)} />

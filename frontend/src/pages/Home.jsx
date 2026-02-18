@@ -69,7 +69,7 @@ export default function Home() {
 
         <h1 className="text-2xl font-bold text-gray-900 mb-1">Natillera On-Chain</h1>
         <p className="text-sm text-gray-500 mb-6 max-w-xs mx-auto">
-          Ahorro rotativo autónomo en Celo Mainnet
+          Autonomous rotating savings on Celo Mainnet
         </p>
 
         <div className="flex flex-col items-center gap-3">
@@ -85,7 +85,7 @@ export default function Home() {
               <path d="M12 2v4" />
               <path d="M8 6h8" />
             </svg>
-            Hablar con el Agente
+            Talk to the Agent
           </button>
 
           {!isConnected && (
@@ -130,7 +130,7 @@ export default function Home() {
 
       {/* ── SECTION B: Live Natillera Dashboard (always visible) ── */}
       <section>
-        <h2 className="text-base font-bold text-gray-900 mb-1">Natilleras Activas en Celo</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-1">Active Natilleras on Celo</h2>
         <p className="text-xs text-gray-400 mb-3">Datos en vivo de los contratos</p>
         <div className="grid grid-cols-2 gap-3">
           {KNOWN_NATILLERAS.map((n) => (
