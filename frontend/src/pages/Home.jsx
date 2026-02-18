@@ -12,9 +12,9 @@ const KNOWN_NATILLERAS = [
 ];
 
 const STATUS_BADGE = {
-  0: { bg: "bg-yellow-100", text: "text-yellow-700", label: "Pendiente" },
-  1: { bg: "bg-green-100", text: "text-green-700", label: "Activa" },
-  2: { bg: "bg-gray-100", text: "text-gray-600", label: "Completada" },
+  0: { bg: "bg-yellow-100", text: "text-yellow-700", label: "Pending" },
+  1: { bg: "bg-green-100", text: "text-green-700", label: "Active" },
+  2: { bg: "bg-gray-100", text: "text-gray-600", label: "Completed" },
   3: { bg: "bg-red-100", text: "text-red-600", label: "Cancelada" },
 };
 
@@ -36,11 +36,11 @@ function NatilleraStatCard({ address, fallbackName }) {
       </div>
       <div className="grid grid-cols-2 gap-2">
         <div className="bg-gray-50 rounded-lg px-3 py-2">
-          <p className="text-[10px] text-gray-400 uppercase tracking-wide">Cuota</p>
+          <p className="text-[10px] text-gray-400 uppercase tracking-wide">Amount</p>
           <p className="text-sm font-bold text-gray-800">${detail.contributionAmount} <span className="text-[10px] font-normal text-gray-400">cUSD</span></p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2">
-          <p className="text-[10px] text-gray-400 uppercase tracking-wide">Ronda</p>
+          <p className="text-[10px] text-gray-400 uppercase tracking-wide">Round</p>
           <p className="text-sm font-bold text-gray-800">
             {detail.roundInfo ? `${detail.roundInfo.round}/${detail.totalRounds}` : `—/${detail.totalRounds || "—"}`}
           </p>
@@ -107,7 +107,7 @@ export default function Home() {
       {/* ── My Natilleras (only when connected + has natilleras) ── */}
       {isConnected && userNatilleras.length > 0 && (
         <section>
-          <h2 className="text-base font-bold text-gray-900 mb-3">Mis Natilleras</h2>
+          <h2 className="text-base font-bold text-gray-900 mb-3">My Natilleras</h2>
           <div className="space-y-3">
             {userNatilleras.map((addr) => (
               <NatilleraCard key={addr} address={addr} />
@@ -118,12 +118,12 @@ export default function Home() {
 
       {isConnected && userNatilleras.length === 0 && (
         <div className="bg-white rounded-2xl p-5 text-center border border-gray-100">
-          <p className="text-sm text-gray-500 mb-3">No tienes natilleras activas</p>
+          <p className="text-sm text-gray-500 mb-3">No active natilleras yet</p>
           <Link
             to="/create"
             className="inline-block bg-celo-green text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-celo-dark transition"
           >
-            Crear tu primera Natillera
+            Create your first Natillera
           </Link>
         </div>
       )}

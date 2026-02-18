@@ -91,7 +91,7 @@ export default function History() {
 
   return (
     <div className="px-4 py-4">
-      <h2 className="text-xl font-bold text-gray-900 mb-4">Historial</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-4">History</h2>
 
       {loading && <p className="text-gray-400 text-sm text-center py-8">Cargando eventos...</p>}
 
@@ -112,7 +112,7 @@ export default function History() {
               >
                 {ev.type === "payout" ? "Pago recibido" : "Contribución"}
               </span>
-              <span className="text-xs text-gray-400">Ronda {ev.round + 1}</span>
+              <span className="text-xs text-gray-400">Round {ev.round + 1}</span>
             </div>
             <p className="text-sm font-mono text-gray-600">
               {ev.member?.slice(0, 8)}...{ev.member?.slice(-6)}

@@ -63,7 +63,7 @@ export default function NatilleraDetail() {
     setSuccess("");
     try {
       await forceAdvance();
-      setSuccess("Ronda avanzada.");
+      setSuccess("Round advanced.");
       detail.refetch();
     } catch (err) {
       setError(err.shortMessage || err.message);
@@ -92,9 +92,9 @@ export default function NatilleraDetail() {
 
       {/* Info cards */}
       <div className="grid grid-cols-2 gap-3 mb-4">
-        <InfoCard label="Cuota" value={`$${detail.contributionAmount} cUSD`} />
-        <InfoCard label="Frecuencia" value={detail.frequencyLabel} />
-        <InfoCard label="Miembros" value={`${detail.memberCount}/${detail.maxMembers}`} />
+        <InfoCard label="Amount" value={`$${detail.contributionAmount} cUSD`} />
+        <InfoCard label="Frequency" value={detail.frequencyLabel} />
+        <InfoCard label="Members" value={`${detail.memberCount}/${detail.maxMembers}`} />
         <InfoCard label="Pozo total" value={`$${(Number(detail.contributionAmount) * detail.maxMembers).toFixed(2)}`} />
       </div>
 
@@ -102,7 +102,7 @@ export default function NatilleraDetail() {
       {isActive && detail.roundInfo && (
         <div className="bg-celo-light rounded-2xl p-4 mb-4">
           <p className="text-sm font-semibold text-celo-dark mb-2">
-            Ronda {detail.roundInfo.round + 1} de {detail.totalRounds}
+            Round {detail.roundInfo.round + 1} of {detail.totalRounds}
           </p>
           <p className="text-xs text-gray-600 mb-1">
             Contribuciones: {detail.roundInfo.contributions}/{detail.memberCount}
@@ -182,7 +182,7 @@ export default function NatilleraDetail() {
       </div>
 
       {/* Members list */}
-      <h3 className="text-base font-semibold text-gray-700 mb-3">Miembros</h3>
+      <h3 className="text-base font-semibold text-gray-700 mb-3">Members</h3>
       <div className="space-y-2">
         {detail.members.map((member, i) => {
           const payoutRound = Number(member.payoutRound);
@@ -196,7 +196,7 @@ export default function NatilleraDetail() {
                     <span className="ml-2 text-xs text-celo-green font-semibold">(Tú)</span>
                   )}
                 </p>
-                <p className="text-xs text-gray-400">Ronda de pago: {payoutRound + 1}</p>
+                <p className="text-xs text-gray-400">Payout round: {payoutRound + 1}</p>
               </div>
               <div className="text-right">
                 {member.hasReceivedPayout && (

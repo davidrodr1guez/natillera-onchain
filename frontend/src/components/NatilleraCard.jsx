@@ -25,17 +25,17 @@ export default function NatilleraCard({ address }) {
 
       <div className="grid grid-cols-3 gap-2 text-center">
         <div className="bg-gray-50 rounded-lg p-2">
-          <p className="text-xs text-gray-500">Cuota</p>
+          <p className="text-xs text-gray-500">Amount</p>
           <p className="text-sm font-semibold text-gray-800">${detail.contributionAmount}</p>
         </div>
         <div className="bg-gray-50 rounded-lg p-2">
-          <p className="text-xs text-gray-500">Miembros</p>
+          <p className="text-xs text-gray-500">Members</p>
           <p className="text-sm font-semibold text-gray-800">
             {detail.memberCount}/{detail.maxMembers}
           </p>
         </div>
         <div className="bg-gray-50 rounded-lg p-2">
-          <p className="text-xs text-gray-500">Frecuencia</p>
+          <p className="text-xs text-gray-500">Frequency</p>
           <p className="text-sm font-semibold text-gray-800">{detail.frequencyLabel}</p>
         </div>
       </div>

@@ -2,8 +2,8 @@ import { useReadContract, useReadContracts, useWriteContract, useWaitForTransact
 import { parseEther, formatEther } from "viem";
 import { NATILLERA_ABI, CUSD_ABI, CUSD_ADDRESS, FACTORY_ABI, FACTORY_ADDRESS } from "../utils/contracts";
 
-const STATUS_MAP = ["Pendiente", "Activa", "Completada", "Cancelada"];
-const FREQ_MAP = ["Semanal", "Quincenal", "Mensual"];
+const STATUS_MAP = ["Pending", "Active", "Completed", "Cancelled"];
+const FREQ_MAP = ["Weekly", "Biweekly", "Monthly"];
 
 export function useFactory() {
   const chainId = useChainId();
